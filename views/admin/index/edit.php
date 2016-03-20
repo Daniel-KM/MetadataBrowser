@@ -1,29 +1,28 @@
-<?php $head = array('title' => 'Category Display Choices: ' . $category->display_name, 'bodyclass' => 'metadata-browser primary', 'content_class' => 'horizontal-nav'); 
-	  head($head);
+<?php
+$pageTitle = __('Category Display Choices: %s', $category->display_name);
+echo head(array(
+    'title' => $pageTitle,
+    'bodyclass' => 'metadata-browser',
+    'content_class' => 'horizontal-nav',
+));
 ?>
-
-
-<h1><?php echo $head['title']?></h1>
-
-
 <div id="primary">
-<?php //echo flash(); ?>
-<p>[<a class="category" href='<?php echo html_escape(uri('metadata-browser/index/show/' . $category->element_id)); ?>'>View Current Assigned Values</a>]</p>
+    <?php echo flash(); ?>
+    <h1><?php echo $pageTitle; ?></h1>
+    <p>[<a class="category" href="<?php echo html_escape(url('metadata-browser/index/show/' . $category->element_id)); ?>"><?php echo __('View Current Assigned Values'); ?></a>]</p>
 	<form method="post">
-	  <?php include 'form.php'; ?>
-      <?php echo $this->formSubmit('metadata-browser-edit-submit', 
-                                     'Save Category', 
-                                     array('id'    => 'metadata-browser-edit-submit', 
-                                           'class' => 'submit submit-medium')); ?>
+	<?php
+        include 'form.php';
+        echo $this->formSubmit('metadata-browser-edit-submit',
+             'Save Category',
+             array(
+                'id' => 'metadata-browser-edit-submit',
+                'class' => 'submit submit-medium',
+        ));
+    ?>
 	</form>
-	
-	
-	<p id="metadata-browser-delete">
-            <a class="delete" href="<?php echo html_escape(uri("metadata-browser/index/delete/id/$category->id")); ?>">Delete This Category</a>
-        </p>
-	
+    <p id="metadata-browser-delete">
+        <a class="delete" href="<?php echo html_escape(url("metadata-browser/index/delete/id/$category->id")); ?>"><?php echo __('Delete This Category'); ?></a>
+    </p>
 </div>
-
-
-
-<?php foot(); ?>
+<?php echo foot();
