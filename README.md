@@ -8,6 +8,9 @@ It is available for Omeka 1.3.2 ([Metadata Browser (1.x)]) and for Omeka 2 ([Met
 
 Related plugin: SortBrowseResults
 
+**Warning**
+This plugin is no longer maintained. Some ideas of it have been included in [Reference].
+
 
 Installation
 ------------
@@ -173,6 +176,7 @@ Copyright
 [digitalMETRO Project]: http://nycdigital.org/
 [Metadata Browser (1.x)]: https://github.com/kevinreiss/Omeka-MetadataBrowser
 [Metadata Browser (2.x)]: https://github.com/Daniel-KM/MetadataBrowser
+[Reference]: https://github.com/Daniel-KM/Reference
 [plugin issues (1.x)]: https://github.com/kevinreiss/Omeka-MetadataBrowser/issues
 [plugin issues (2.x)]: https://github.com/Daniel-KM/MetadataBrowser/issues
 [GNU/GPL v3]: https://www.gnu.org/licenses/gpl-3.0.html
